@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Zaplanuj Jedzonko</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+            integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+            crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+<header class="app-header">
+    <h1>Zaplanuj<span>Jedzonko</span></h1>
+    <p class="icons">Imię</p>
+</header>
+<section class="app-content">
+    <div class="navMen">
+        <p><a href="app.html">Pulpit</a></p>
+        <p><a class="active" href="recipes.html">Przepisy</a></p>
+        <p><a href="schedules.html">Plany</a></p>
+    </div>
+    <div class="appBase">
+        <section class="recipes-content">
+            <div class="recipes-header">
+                <h1>LISTA PRZEPISÓW</h1>
+                <p class="addRec"></p>
+            </div>
+            <div class="sec-header">
+                <h1>ID</h1>
+                <h2>NAZWA</h2>
+                <h3>OPIS</h3>
+                <h4>AKCJE</h4>
+            </div>
+            <div class="all-recipes">
+            </div>
+        </section>
+    </div>
+</section>
+
+<!-- MODAL WINDOW -->
+
+<div class="modal-window">
+    <section class="add-recipes-section">
+        <form class="add-recipes-box" id="form-add-recipe">
+            <header class="add-recipes-header">
+                <p class="new-recipes-header">Nowy przepis</p>
+                <input
+                        id="save-recipes-btn"
+                        type="submit"
+                        value="Zapisz i zamknij"
+                />
+            </header>
+            <div class="recipes-name">
+                <div>
+                    <label class="reciepies-label">Nazwa przepisu</label
+                    ><input type="text" id="recipe-name" />
+                </div>
+                <div>
+                    <label class="reciepies-label">Opis przepisu</label>
+                    <textarea rows="3" id="recipe-description"></textarea>
+                </div>
+            </div>
+            <div class="recipes-details">
+                <div class="instructions-box">
+                    <p class="instruction-title">Instrukcje</p>
+                    <textarea id="instruction-input" rows="3"></textarea>
+                    <button class="add-btn instruction-btn">
+                        <i class="fas fa-plus-square"></i>
+                    </button>
+                    <ol class="instruction-list"></ol>
+                </div>
+                <div class="ingredients">
+                    <p class="instruction-title">Składniki</p>
+                    <input type="text" id="ingredients-input" />
+                    <button class="add-btn ingredients-btn">
+                        <i class="fas fa-plus-square"></i>
+                    </button>
+                    <ul class="ingredients-list"></ul>
+                </div>
+            </div>
+        </form>
+    </section>
+
+<script src="./js/recipes.js"></script>
+</body>
+</html>

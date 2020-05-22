@@ -1,0 +1,348 @@
+@import '../font-awesome/fontawesome';
+
+.content-box {
+  max-width: 1352px;
+  margin: 0 auto;
+}
+
+//carousel
+.carousel-box {
+  position: relative;
+}
+@mixin button-change {
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  color: #fff;
+  background-color: #999;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 28px;
+  line-height: 39px;
+  font-weight: bold;
+}
+#prevPicture {
+  @include button-change;
+}
+
+#nextPicture {
+  @include button-change;
+  right: 0;
+}
+
+.carousel {
+  list-style: none;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  li {
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.carousel .visible {
+  display: inline-block;
+}
+//carousel end
+
+//CALL TO ACTION STYLES
+.call-to-action-section .content-box {
+  color: #e5e5e5;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  font-family: $main-font;
+}
+.call-to-action-section {
+  background-color: map_get($colors, header);
+}
+.cta-banner {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+.cta-text {
+  font-size: 1.3em;
+  max-width: 750px;
+}
+%btn {
+  background-color: map_get($colors, button);
+  text-decoration: none;
+  color: white;
+}
+.action-btn {
+  @extend %btn;
+  font-size: 1.5em;
+  padding: 15px 35px;
+  margin-left: 100px;
+}
+//CALL TO ACTION STYLES END
+
+.landing-page-header-background-container {
+  background: map-get($map: $colors, $key: header);
+}
+
+.landing-page-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 35px 90px;
+  h1 {
+    font-family: $logo-font;
+    font-size: 3rem;
+    #first {
+      font-weight: 100;
+      color: white;
+    }
+    #second {
+      color: map-get($map: $colors, $key: button);
+      font-weight: 700;
+    }
+  }
+  .landing-page-nav {
+    text-transform: uppercase;
+    font-family: $main-font;
+    font-size: 1rem;
+    color: #fff;
+    scroll-behavior: smooth;
+    .landing-page-menu-list {
+      scroll-behavior: smooth;
+      display: flex;
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      li {
+        padding-left: 40px;
+      }
+      #menu-list-accent {
+        color: map-get($map: $colors, $key: button);
+      }
+    }
+  }
+}
+
+/*--end-nav--*/
+
+/*features-sections styles*/
+.features-sections {
+  background-color: #e2e2e2;
+  color: map_get($colors, nav);
+  font-family: $main-font;
+}
+.features-sections .content-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px;
+}
+.features-boxes {
+  text-align: center;
+  width: 310px;
+  font-size: 20px;
+  .fa,
+  .far {
+    font-size: 60px;
+    color: map_get($colors, table);
+  }
+}
+.features-heading {
+  font-size: 30px;
+  margin: 20px 0 20px 0;
+}
+.features-text {
+  width: 260px;
+  margin: auto;
+}
+/*features-sections styles end*/
+
+// NEWSLETTER
+
+.newsletter {
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: map-get($map: $colors, $key: nav);
+  h3 {
+    color: map-get($colors, $key: screen);
+    font-family: $main-font;
+    font-size: 2.5em;
+  }
+
+  .submit_box {
+    display: flex;
+
+    input {
+      padding: 3px 68px;
+      margin: 0;
+      &[type='text'] {
+        font-size: 18px;
+      }
+    }
+
+    button {
+      background-color: #ff6600;
+      text-decoration: none;
+      color: white;
+      font-size: 1.5em;
+      padding: 9px 35px;
+      border: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+// START- 1.6 STYLE
+
+.about-me-background-container {
+  background: #ebebeb;
+  .content-box {
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    justify-content: space-around;
+    .author-photo {
+      width: 337px;
+      height: 357px;
+      background-image: url("https://images.pexels.com/photos/2494659/pexels-photo-2494659.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+      background-size: cover;
+    }
+    .author-description {
+      max-width: 592px;
+      font-family: $main-font;
+      color: #000;
+      .author-header {
+        font-size: 2rem;
+        padding-bottom: 20px;
+      }
+      .author-text {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+// END - 1.6 STYLE
+
+//START 1.7 STYLE
+
+.page-info {
+  background: map-get($colors, 'nav');
+  .content-box {
+    display: flex;
+    justify-content: center;
+    .column {
+      font-size: 1.2rem;
+      color: #fff;
+      flex: 1;
+      max-width: 350px;
+      line-height: 1.2rem;
+      padding: 30px 15px;
+
+      h2 {
+        font-size: 2rem;
+        padding-bottom: 15px;
+      }
+    }
+    .column-second {
+      margin: 0px 20px;
+    }
+    .column-third {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .submit_box {
+        display: flex;
+        margin-top: 20px;
+
+        input {
+          max-width: 200px;
+        }
+
+        button {
+          background-color: #ff6600;
+          text-decoration: none;
+          color: white;
+          cursor: pointer;
+          border: none;
+          font-size: 1.2rem;
+          padding: 5px 10px;
+        }
+      }
+      .social-media-box {
+        display: flex;
+
+        font-size: 1.5rem;
+        margin-top: 20px;
+      }
+      .twitter {
+        @extend %fa-icon;
+        @extend .fab;
+        text-decoration: none;
+        color: #fff;
+        padding: 0 40px;
+
+        &:before {
+          content: fa-content($fa-var-twitter-square);
+        }
+      }
+
+      .facebook {
+        @extend %fa-icon;
+        @extend .fab;
+        text-decoration: none;
+        color: #fff;
+        padding-left: 5px;
+
+        &:before {
+          content: fa-content($fa-var-facebook-square);
+        }
+      }
+
+      .instagram {
+        @extend %fa-icon;
+        @extend .fab;
+        text-decoration: none;
+        color: #fff;
+
+        &:before {
+          content: fa-content($fa-var-instagram-square);
+        }
+      }
+    }
+
+    .column-second {
+      ul {
+        list-style: disc;
+        list-style-position: inside;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
+
+.page-footer {
+  background: map-get($map: $colors, $key: header);
+  font-size: 1.2rem;
+  color: #fff;
+  .content-box {
+    display: flex;
+    justify-content: center;
+    .copyright-text {
+      padding: 15px 0;
+      span {
+        color: map-get($map: $colors, $key: 'button');
+      }
+    }
+  }
+}
+
+//END 1.7 STYLE
